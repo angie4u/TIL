@@ -28,7 +28,7 @@ function analyze () {
     if (response.ok) {
       return response.json()
     } else {
-      return Promise.reject(new Error(response.statusText))
+      return Promise.reject(new Error(response))
     }
   }).then(function (response) {
     // display picture
@@ -38,7 +38,9 @@ function analyze () {
     updateExaminedText(response[0].faceAttributes)
     // document.getElementById('output').innerHTML = 'Total Key Phrases: ' + response.documents[0].keyPhrases.length + '</br>' + response.documents[0].keyPhrases
   }).catch(function (err) {
-    alert(err)
+    // alert(err)
     document.getElementById('output').innerHTML = ''
+    document.getElementById('photo').src = document.getElementById('input').value
+    document.getElementById('info').innerHTML = 'No Faces Detected'
   })
 }
