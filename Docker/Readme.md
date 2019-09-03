@@ -17,3 +17,12 @@ docker run -it -p 5001:443 -e KeyVaultName=<KeyVaultName> -e CertificateName=<Ce
 helm upgrade va-dev .   
 helm upgrade --recreate-pods va-dev .
 ```
+
+# 그밖에 도움되는...
+```
+kubectl logs <container name>
+kubectl get pods
+kubectl get pods --namespace kube-system
+helm ls -a
+az acr login --name vameetsaks0711
+```
