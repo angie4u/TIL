@@ -26,3 +26,10 @@ kubectl get pods --namespace kube-system
 helm ls -a
 az acr login --name vameetsaks0711
 ```
+
+# Secret 업데이트
+```
+kubectl apply -f secret.yaml
+kubectl get secret azuresecret
+kubectl get secret azuresecret -o yaml
+```
