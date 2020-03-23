@@ -1,0 +1,14 @@
+# Environment setup
+ ```
+ create-react-app react-test --template typescript
+ ```
+ 
+# Packaging the App
+```
+npm run build
+```
+
+# server setup
+```
+npx serve -s build
+```
